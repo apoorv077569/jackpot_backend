@@ -15,7 +15,7 @@ export const createUser = async (req, res) => {
     }
 
     // Check for existing user
-    const existingUser = await User.findOne({ $or: [{ username }, { email }] });
+    const existingUser = await User.findOne({email});
     if (existingUser) {
       return res
         .status(400)
