@@ -4,7 +4,6 @@ import connectDB from "./src/db.js";
 
 dotenv.config();
 
-// Render/Railway apna port ENV me bhejta hai, warna 5000 use karo
 const PORT = process.env.PORT || 5000;
 
 // Connect to DB and start server
