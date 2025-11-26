@@ -11,7 +11,7 @@
 // export default router;
 
 import express from "express";
-import { createGame, spinGame, getGame } from "../controllers/gameController.js";
+import { createGame, spinGame, getGame, exitGame } from "../controllers/gameController.js";
 
 const router = express.Router();
 
@@ -23,5 +23,8 @@ router.post("/spin", spinGame);
 
 // Get game status
 router.get("/:gameId", getGame);
+
+// exit
+router.post("/exit",exitGame);
 
 export default router;
